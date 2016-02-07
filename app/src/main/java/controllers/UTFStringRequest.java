@@ -29,7 +29,7 @@ public class UTFStringRequest
 
         String utf8String = null;
         try {
-            utf8String = new String(response.data, "UTF-8");
+            utf8String = new String(response.data, "Windows-1255");
             return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
 
         } catch (UnsupportedEncodingException e) {
